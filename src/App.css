@@ -1,38 +1,227 @@
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* for Header */
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  background-color: #222429;
+  color: #fff;
+}
+.logo{
+  width: 20%;
+}
+.logo h1 a{
+  color: #ff572c;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.menu{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-menu , .bottom-menu{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.top-menu{
+  background-color: #bdbdbf;
+}
+.top_left_menu{
+  display: flex;
+}
+.top_left_menu h6{
+  margin: 0;
+  padding: 12px 0px;
+  font-size: 16px;
+  color: #222429;
+}
+.top_left_menu h6 span{
+  padding: 0px 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.top_left_menu h6 span svg{
+  color: #ff572c;
+}
+.top_right_menu ul,  .bottom-menu-left ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.top_right_menu ul li , .bottom-menu-left ul li{
+  padding: 0px 10px;
+}
+
+.top_right_menu ul li a{
+  color: #222429 !important;
+}
+.top_right_menu ul li a , .bottom-menu-left ul li a{
+  color: #fff;
+  transition: .4s;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.bottom-menu-left ul li a:hover{
+  color: #ff572c;
+}
+.bottom-menu-right a{
+  background: #ff572c;
+  padding: 7px 15px;
+  margin: 8px 8px;
+  text-decoration: none;
+  display: block;
+  transition: .5s;
+  border-radius: 4px;
+  color: #fff;
+}
+.bottom-menu-right a:hover{
+  color: #000;
+  background-color: #fc7442;
+  border-color: #fb6b37;
+}
+
+/* for footer */
+.footer_section{
+  background-color: #222429;
+}
+.site_footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_left_part{
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_right_part{
+  width: 40%;
+}
+.get_touch{
+  display: flex;
+  color: #fff;
+  padding: 5px 0px;
+}
+.get_in_touch{
+  padding: 15px;
+  text-align: left;
+}
+.get_in_touch h4 , .quick_link h4{
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+  padding: 13px 0px;
+}
+.get_in_touch span{
+  margin-right: 12px;
+}
+.get_in_touch span svg , .quick_link ul li span svg{
+  color: #fb6b37 !important;
+}
+.quick_link{
+  padding: 10px 20px;
+}
+.quick_link ul{
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+.quick_link ul li{
+  padding: 5px 0px;
+}
+.quick_link ul li a{
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: transform 250ms;
+  text-transform: capitalize;
+}
+.quick_link ul li a:hover{
+  transform: translateY(-10px);
+  color: #fb6b37;
+}
+/* slider */
+.slider_block{
+  background-color: aquamarine;
+  margin: 10px;
+}
+
+/* contact us style */
+.contactus_section{
+  padding: 40px 0px;
+}
+.getinTouch h5{
+  color: #fb6b37;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 17px;
+}
+.getinTouch h1{
+  color: #222429;
+  font-size: 62px;
+  text-transform: uppercase;
+}
+.contact_get_in{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+.contact_get_in .card{
+  width: 26%;
+  background-color: #222429;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 48px 16px;
+}
+.contact_get_in .card p{
+  color: #bdbdbf;
+}
+.card_icon svg{
+  font-size: 32px;
+  color: #fff;
+  background: #fb6b37;
+  border-radius: 50%;
+  padding: 17px;
+}
+.contact_form_section{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0px;
+}
+.contact_form{
+ background-color: #222429;
+ width: 50%;
+ padding: 30px 0px;
+}
+.form-field{
+  margin-bottom: 15px;
+}
+input[type="text"]{
+  padding: 13px 20px;
+}
+textarea{
+  padding: 8px 20px;
+}
+.contact_btn{
+  background: #fb6b37;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.contact_btn:hover{
+  background-color: #fc7442;
+  color: #222429;
+}
+.contact_map{
+  width: 50%;
 }
