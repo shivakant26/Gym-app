@@ -54,7 +54,7 @@ function Header() {
                 {menuOption?.map((option, index) => {
                   return (
                     <li key={index}>
-                      <Link data-testid="link" to={option.url}>
+                      <Link data-testid="link" to={option?.url}>
                         {option.urlLabel}
                       </Link>
                     </li>

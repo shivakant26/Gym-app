@@ -10,6 +10,7 @@ const MainRoute = () => {
         {allRouter?.map((route, index) => {
           return (
             <Route
+              key={index}
               path={route?.slug}
               element={<PublicRoutes>{route?.component}</PublicRoutes>}
             />
