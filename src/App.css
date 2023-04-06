@@ -1,6 +1,24 @@
-
-.App {
+/* common css */
+.center{
   text-align: center;
+}
+.uppercase-text{
+  text-transform: uppercase;
+}
+.text-secondary {
+  color: #BDBDBF!important;
+}
+
+.overlay , .bannerOverlay{
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ top: 0;
+ left: 0;
+ background-color: rgba(0, 0, 0, 0.2); 
+}
+.bannerOverlay{
+  background-color: rgba(0, 0, 0, 0.8); 
 }
 /* for Header */
 .header{
@@ -147,9 +165,42 @@
   color: #fb6b37;
 }
 /* slider */
-.slider_block{
-  background-color: aquamarine;
-  margin: 10px;
+
+.banner_block , .banner_slider{
+  position: relative;
+}
+.banner_text{
+  position: absolute;
+  float: left;
+  top: 50%;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 35px;
+  text-transform: capitalize;
+}
+.banner_text h1{
+  margin: 0px 0px 10px 0px;
+  text-transform: uppercase;
+}
+.banner_slider img{
+  width: 100%;
+  height: 500px;
+}
+.banner_btn_group{
+  display: flex;
+  justify-content: space-between;
+}
+.home_btn ,.slug_btn{
+  padding: 13px 30px;
+    background: orange;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+}
+.slug_btn{
+  background-color: #fff;
 }
 
 /* contact us style */
@@ -202,12 +253,28 @@
 }
 .form-field{
   margin-bottom: 15px;
+  position: relative;
+}
+.error , .textareaError{
+  position: absolute;
+  top: 31px;
+  color: red;
+  left: 140px;
+  font-size: 13px
+}
+.textareaError{
+  top:81px !important;
+}
+.form_inner{
+  padding: 0px 45px;
 }
 input[type="text"]{
   padding: 13px 20px;
+  width: 50%;
 }
 textarea{
   padding: 8px 20px;
+  width: 50%;
 }
 .contact_btn{
   background: #fb6b37;
@@ -218,10 +285,106 @@ textarea{
     text-transform: uppercase;
     font-weight: 800;
 }
-.contact_btn:hover{
+.active,.contact_btn:hover{
   background-color: #fc7442;
   color: #222429;
 }
 .contact_map{
   width: 50%;
+}
+
+/* classes page desing here */
+.classes_section{
+  padding: 50px 0px;
+}
+.group_pannel ul{
+  list-style: none;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #222429;
+  justify-content: space-around;
+  margin: 40px auto;
+  padding: 0;
+  border-radius: 20px;
+}
+.group_pannel ul li{
+  padding: 8px 19px;
+  border-radius: 20px;
+  transition: .4s;
+}
+.group_pannel ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.group_pannel ul li:hover{
+  background-color: #fb6b37;
+}
+
+.classes_card_wr{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.classes_card{
+  width: 16%;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #222429;
+}
+.classes_card h6 , .classes_card h5{
+  margin: 0;
+  padding: 12px 0px;
+  font-size: 16px;
+}
+.classes_card h5{
+  font-size: 20px;
+  color: #fb6b37;
+}
+
+/* trainer pages design */
+.trainer_section{
+  padding: 40px 0px;
+}
+.trainer_card_wr{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+.builder_card{
+  width: 25%;
+  margin: 20px;
+  position: relative;
+}
+.trainer_image{
+  overflow: hidden;
+  height: auto;
+}
+.trainer_image img{
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+.trainer_image:hover img{
+  transform: scale(1.2);
+}
+.trainer_bio{
+  position: absolute;
+  margin: 0px 0px;
+  bottom: 0px;
+  width: 85%;
+  background: rgba(0,0,0,0.8);
+  padding: 24px;
+}
+.trainer_bio h5, .trainer_bio p{
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+}
+.trainer_bio p{
+  color:#bdbdbf;
+  font-size: 20px;
 }

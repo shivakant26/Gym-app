@@ -1,14 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
-const Banner = () => {
+import ImageFirst from "../assets/images/banner-1.jpg";
+import ImageSecond from "../assets/images/banner-2.jpg";
+
+const Banner = ({ slug }) => {
   var settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    speed: 500,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -38,28 +39,35 @@ const Banner = () => {
   };
   return (
     <>
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div className="slider_block">
-            <h3>1</h3>
-          </div>
-          <div className="slider_block">
-            <h3>2</h3>
-          </div>
-          <div className="slider_block">
-            <h3>3</h3>
-          </div>
-          <div className="slider_block">
-            <h3>4</h3>
-          </div>
-          <div className="slider_block">
-            <h3>5</h3>
-          </div>
-          <div className="slider_block">
-            <h3>6</h3>
-          </div>
-        </Slider>
+      <div className="banner_slider">
+        {slug === "" ? (
+          <>
+            <Slider {...settings}>
+              <div className="slider_block">
+                <img src={ImageFirst} alt="image-one" />
+                <div className="overlay"></div>
+              </div>
+              <div className="slider_block">
+                <img src={ImageSecond} alt="image-two" />
+                <div className="overlay"></div>
+              </div>
+            </Slider>
+          </>
+        ) : (
+          <>
+            <div className="slider_block">
+              <img src={ImageFirst} alt="image-one" />
+              <div className="banner_text">
+                <h1>{slug}</h1>
+                <div className="banner_btn_group">
+                  <button className="home_btn">Home</button>
+                  <button className="slug_btn">{slug}</button>
+                </div>
+              </div>
+              <div className="bannerOverlay"></div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

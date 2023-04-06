@@ -1,10 +1,13 @@
 import React from "react";
 import GetInTouch from "../GetInTouch";
-import FooterMenuLinks from "./FooterMenu";
-function Footer() {
+import FooterMenuLinks from "../common/FooterMenu";
+import { Container } from "react-bootstrap";
+
+const Footer = ()=> {
   return (
     <>
       <div className="footer_section">
+        <Container>
         <div className="site_footer">
           <div className="footer_left_part">
             <div className="get_in_touch">
@@ -22,6 +25,7 @@ function Footer() {
           </div>
           <div className="footer_right_part"></div>
         </div>
+        </Container>
       </div>
     </>
   );
